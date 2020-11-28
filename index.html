@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Magic 8 Ball</title>
+</head>
+<body>
+    <h1 style="background: rgba(0,0,0,.5)">Magic Eight Ball</h1>
+    <main>
+
+        <!-- To Show the name -->
+        <div class="heading">
+            <h3 id="showName"></h3>
+        </div>
+
+        <!-- First section to show Name -->
+        <div id="div1">
+            <p>Enter Your Name below:</p>
+            <input class="inp" type="text" name="name" pattern="[A-Za-z]{3}" id="uname" placeholder="Enter Your Name.."><br><br>
+            <input class="btn" type="submit" value="Enter" onclick="div1()">
+        </div>
+
+        <!-- Second Section to take User decision -->
+        <div id="div2">
+            <h1>Welcome to Magic 8 Ball </h1>
+            <p> let's have fun</p>
+            
+            <input class="btn" type="button" name="quit" id="quit" value="Quit" onclick="setTimeout(quit, 2000)">
+            <input class="btn" type="button" name="start" id="start" value="Let's Start" onclick="start()">
+        </div>
+        
+        <!-- Third section to Question -->
+        <div id="div3">
+            <h2 id="question"></h2>
+            <p id="answer"></p>
+            <select name="select" id="opt" onclick="select()">
+                <option value="Should I start business with my Friend?">question1</option>
+                <option value="Will My Career improve?">question2</option>
+                <option value="Will you be success in life?">question3</option>
+                <option value="Will my health improve this year?">question4</option>
+                <option value="Will you have Chances to be More wealthier?">question5</option>
+                <option value="Will my family Support me?">question6</option>
+                <option value="Should I move to USA, will I be successful?">question7</option>
+                <option value="Is today is safe for jaurney">question8</option>
+            </select>
+            <br><br>
+            <input class="btn" type="button" name="quit" id="quit" value="Quit" onclick="setTimeout(quit, 1000)">
+        </div>
+    </main>
+</body>
+<script src="main.js"></script>
+</html>
